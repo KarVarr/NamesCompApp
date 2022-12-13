@@ -31,3 +31,18 @@ class FirstViewController: UIViewController {
     }
 }
 
+extension FirstViewController: UITextFieldDelegate {
+    override func  touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == yourNameTF {
+            partherNameTF.becomeFirstResponder()
+        } else {
+            resultButtonTapped()
+        }
+        return true
+    }
+}
