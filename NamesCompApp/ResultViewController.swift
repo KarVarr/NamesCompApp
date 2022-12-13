@@ -30,8 +30,7 @@ class ResultViewController: UIViewController {
     }
     
     
-    
-    
+   
     
     
 }

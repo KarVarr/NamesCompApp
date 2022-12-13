@@ -11,7 +11,7 @@
         <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="NamesCompApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="FirstViewController" customModule="NamesCompApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,6 +99,7 @@
                             <constraint firstItem="njb-Zd-SOb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zcG-zc-oXA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Y7X-fh-UNf"/>
                     <connections>
                         <outlet property="partherNameTF" destination="NoN-wm-Ahf" id="Lpd-Pc-koo"/>
                         <outlet property="yourNameTF" destination="gdl-Rm-u1q" id="9b7-p2-Up6"/>
@@ -159,6 +160,9 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="7Pk-9I-Uau" kind="unwind" unwindAction="unwindSegueToFirstVCWithSegue:" id="OVV-tg-Mdg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x8L-4E-6zC"/>
@@ -184,8 +188,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bro-0p-sqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7Pk-9I-Uau" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="860.74766355140184" y="-28.509719222462206"/>
+            <point key="canvasLocation" x="1087" y="-28"/>
         </scene>
     </scenes>
 </document>

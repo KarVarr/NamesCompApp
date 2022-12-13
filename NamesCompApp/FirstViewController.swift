@@ -12,10 +12,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var yourNameTF: UITextField!
     @IBOutlet weak var partherNameTF: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    
     
     //MARK: - segue without id
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -27,7 +24,28 @@ class FirstViewController: UIViewController {
     
     //MARK: - segue with id
     @IBAction func resultButtonTapped() {
-        performSegue(withIdentifier: "goToResult", sender: nil)
+        if yourNameTF.text != "" && partherNameTF.text != "" {
+            performSegue(withIdentifier: "goToResult", sender: nil)
+        } else {
+            showAler(title: "Write names", message: "You can't go fordher witout a names")
+            return
+        }
+    }
+    //MARK: - sugue back to first VC
+    @IBAction func unwindSegueToFirstVC(segue: UIStoryboardSegue) {
+        yourNameTF.text = ""
+        partherNameTF.text = ""
+    }
+    
+}
+
+
+extension FirstViewController {
+    private func showAler(title: String, message: String) -> Void {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 
