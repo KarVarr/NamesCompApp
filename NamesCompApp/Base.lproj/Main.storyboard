@@ -78,7 +78,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="aGZ-2c-ptb"/>
-                                    <segue destination="bXH-XS-Yje" kind="show" id="pHQ-0o-9lX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,6 +96,7 @@
                     <connections>
                         <outlet property="partherNameTF" destination="NoN-wm-Ahf" id="Lpd-Pc-koo"/>
                         <outlet property="yourNameTF" destination="gdl-Rm-u1q" id="9b7-p2-Up6"/>
+                        <segue destination="bXH-XS-Yje" kind="show" identifier="goToResult" id="ZY4-jG-Odk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
